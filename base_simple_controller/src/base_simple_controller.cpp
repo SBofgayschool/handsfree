@@ -65,7 +65,7 @@ bool BaseSimpleController::init(hardware_interface::BaseVelocityInterface* hw,
 	odom_pub_->msg_.twist.twist.linear.z  = 0;
 	odom_pub_->msg_.twist.twist.angular.x = 0;
 	odom_pub_->msg_.twist.twist.angular.y = 0;
-	odom_pub_->msg_.pose.covariance = boost::assign::list_of
+	odom_pub_->msg_.twist.covariance = boost::assign::list_of
 			(0.001) (0)  (0)  (0)  (0)  (0)
 			(0)  (0.001) (0)  (0)  (0)  (0)
 			(0)  (0)  (1000000.0) (0)  (0)  (0)
